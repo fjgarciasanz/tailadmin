@@ -3,7 +3,7 @@
   class="sidebar fixed left-0 top-0 z-9999 flex h-screen w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 duration-300 ease-linear dark:border-gray-800 dark:bg-black lg:static lg:translate-x-0"
   @click.outside="sidebarToggle = false"
 >
-  <!-- SIDEBAR HEADER -->
+  <!-- Encabezado -->
   <div
     :class="sidebarToggle ? 'justify-center' : 'justify-between'"
     class="sidebar-header flex items-center gap-2 pb-7 pt-8"
@@ -26,7 +26,7 @@
       />
     </a>
   </div>
-  <!-- SIDEBAR HEADER -->
+  <!-- Encabezado -->
 
   <div
     class="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear"
@@ -68,10 +68,10 @@
               href="#"
               @click.prevent="selected = (selected === 'Dashboard' ? '':'Dashboard')"
               class="menu-item group"
-              :class=" (selected === 'Dashboard') || (page === 'ecommerce' || page === 'analytics' || page === 'marketing' || page === 'crm' || page === 'stocks') ? 'menu-item-active' : 'menu-item-inactive'"
+              :class=" (selected === 'Dashboard') || (page === 'ecommerce' || page === 'Midashboard' || page === 'marketing' || page === 'crm' || page === 'stocks') ? 'menu-item-active' : 'menu-item-inactive'"
             >
               <svg
-                :class="(selected === 'Dashboard') || (page === 'ecommerce' || page === 'analytics' || page === 'marketing' || page === 'crm' || page === 'stocks') ? 'menu-item-icon-active'  :'menu-item-icon-inactive'"
+                :class="(selected === 'Dashboard') || (page === 'ecommerce' || page === 'Midashboard' || page === 'marketing' || page === 'crm' || page === 'stocks') ? 'menu-item-icon-active'  :'menu-item-icon-inactive'"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -136,15 +136,7 @@
                     class="menu-dropdown-item group"
                     :class="page === 'Midashboard' ? 'menu-dropdown-item-active' : 'menu-dropdown-item-inactive'"
                   >
-                    Analytics
-                    <span class="absolute right-3 flex items-center gap-1">
-                      <span
-                        class="menu-dropdown-badge"
-                        :class="page === 'analytics' ? 'menu-dropdown-badge-active' : 'menu-dropdown-badge-inactive'"
-                      >
-                        Pro
-                      </span>
-                    </span>
+                    Midashboard
                   </a>
                 </li>
                 <li>

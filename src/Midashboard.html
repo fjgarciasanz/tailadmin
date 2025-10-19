@@ -12,7 +12,8 @@
     </title>
   </head>
   <body
-    x-data="{ page: 'Midashboard', 'loaded': true, 'darkMode': false, 'stickyMenu': false, 'sidebarToggle': false, 'scrollTop': false }"
+    x-data="{ page: 'Midashboard', loaded: true, darkMode: false, stickyMenu: false, sidebarToggle: false, scrollTop: false }"
+
     x-init="
          darkMode = JSON.parse(localStorage.getItem('darkMode'));
          $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))"
@@ -30,7 +31,7 @@
 
       <!-- ===== Content Area Start ===== -->
       <div
-        class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-auto"
+        class="relative flex flex-col flex-1 overflow-x-hidden overflow-y-aut
       >
         <!-- Small Device Overlay Start -->
         <include src="./partials/overlay.html" />

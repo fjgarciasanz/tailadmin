@@ -3,6 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import "dropzone/dist/dropzone.css";
 import "../css/style.css";
 
+
 import Alpine from "alpinejs";
 import persist from "@alpinejs/persist";
 import flatpickr from "flatpickr";
@@ -11,14 +12,12 @@ import Dropzone from "dropzone";
 import chart01 from "./components/charts/chart-01";
 import chart02 from "./components/charts/chart-02";
 import chart03 from "./components/charts/chart-03";
+import Midashboard from "./components/charts/Midashboard.js";
 import map01 from "./components/map-01";
 import "./components/calendar-init.js";
 import "./components/image-resize";
 
 
-Alpine.plugin(persist);
-window.Alpine = Alpine;
-Alpine.start();
 
 // Init flatpickr
 flatpickr(".datepicker", {
@@ -56,6 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
   chart02();
   chart03();
   map01();
+  Midashboard();
+
+    // Inicializar Alpine al final
+  Alpine.plugin(persist);
+  window.Alpine = Alpine;
+  Alpine.start();
 });
 
 // Get the current year
@@ -117,9 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   
-  document.addEventListener("DOMContentLoaded", () => {
-  import("./components/charts/Midashboard.js").then(mod => mod.default());
-  });
+
 
 
 });
